@@ -139,3 +139,43 @@ public class Delivery extends javax.swing.JFrame {
          System.exit(0);
          }
     }
+
+   private void orderActionPerformed(java.awt.event.actionEvent evt){
+        //TODO add your handling code here:
+   new dataPelanggan().setVisible(true);
+  }
+  
+ Private void formWindowActivated(java.event.WindowsEvent evt){
+    //TODO add your handing codd here
+    tgl.addltem("-"):;
+    for(int a=1; a<=31; a++){
+      tgl.additem(a);
+    }
+
+bln.addltem("-");
+bln.addltem("Januari");
+bln.addltem("Februari");
+bln.addlten("Maret");
+bln.addlten("April");
+bln.addlten("Mei");
+bln.addlten("Juni");
+bln.addlten("Juli");
+bln.addlten("Agustus");
+bln.addlten("September");
+bln.addlten("Oktober");
+bln.addlten("November");
+bln.addlten("Desember");
+
+thn.addltem("-");
+for (int b=2017; b<=2021; b++){
+thn.addltemp(b);
+}
+}
+
+  private void submitActionPerformed(java.awt.event.ActionEvent evt){
+    //TODO add your handling code here:
+  JOptionPane.showMessageDialog(null, "Terimakasih atas pesanan anda.");
+  JOptionPane.showMessageDialog(null, "Paket makanan Anda Akan Segera Kami Antar.");
+  System.exit(0);
+ }
+
