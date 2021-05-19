@@ -139,3 +139,22 @@ public class Delivery extends javax.swing.JFrame {
          System.exit(0);
          }
     }
+    
+    private void orderActionPerformed(java.awt.event.windowEvent evt){
+    //TODO add your handling code here:
+    new DataPelanggan().setVisible(true).
+    }
+    
+     
+    JFrame kedua; Data Pelanggan
+    
+    private  void formWindowsACtivated(java.awt.event.WindowsEvent evt){
+    //TODO add your handling code here:
+    tgl.addItem("-");
+    for (int a=1; a<=31;a++){
+       tgl.addItem(a);
+    }
+    
+    bln.addItem("-");
+    bln.addItem("Januari");
+    bln.additem("februari");
