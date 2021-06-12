@@ -1,76 +1,104 @@
-import javax.swing.JOptionPane;
+package tubes;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
 /**
  *
- * @author Asus
+ * @author USER
  */
-public class Delivery extends javax.swing.JFrame {
+public class restoran extends javax.swing.JFrame {
 
     /**
-     * Creates new form Delivery
+     * Creates new form restoran
      */
-    public Delivery() {
+    public restoran() {
         initComponents();
-        JOptionPane.showMessageDialog(null, “Selamat Datang di Resto Doyan Ngunyah!” +
-                ” Silahkan Pilih Pesanan Anda. “);
     }
-    
-    private void transaksiActionPerformed(java.awt.event.ActionEvent evt) {                                          
+
+    /**
+     * 
+    private void kmieaActionPerformed(java.awt.event.ActionEvent evt) {                                      
         // TODO add your handling code here:
-        int a1 = Integer.parseInt(oharga1.getText());
-        int b1 = Integer.parseInt(jmlps1.getText());
-        int t1 = a1*b1;
-        total1.setText(“”+t1);
-        int a2 = Integer.parseInt(oharga2.getText());
-        int b2 = Integer.parseInt(jmlps2.getText());
-        int t2 = a2*b2;
-        total2.setText(“”+t2);
-        int a3 = Integer.parseInt(oharga3.getText());
-        int b3 = Integer.parseInt(jmlps3.getText());
-        int t3 = a3*b3;
-        total3.setText(“”+t3);
-        int a4 = Integer.parseInt(oharga4.getText());
-        int b4 = Integer.parseInt(jmlps4.getText());
-        int t4 = a4*b4;
-        total4.setText(“”+t4);
-        int c1 = Integer.parseInt(total1.getText());
-        int c2 = Integer.parseInt(total2.getText());
-        int c3 = Integer.parseInt(total3.getText());
-        int c4 = Integer.parseInt(total4.getText());
-        int hasil = c1+c2+c3+c4;
-        totalbiaya.setText(“”+hasil);
-    }                           
-    
-    private void orderbaruActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    }                                     
+
+    private void btnpesanActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        onama1.setText(“”);
-        onama2.setText(“”);
-        onama3.setText(“”);
-        onama4.setText(“”);
-        oharga1.setText(“”);
-        oharga2.setText(“”);
-        oharga3.setText(“”);
-        oharga4.setText(“”);
-        jmlps1.setText(“”);
-        jmlps2.setText(“”);
-        jmlps3.setText(“”);
-        jmlps4.setText(“”);
-        total1.setText(“”);
-        total2.setText(“”);
-        total3.setText(“”);
-        total4.setText(“”);
-        totalbiaya.setText(“”);
-        bayar.setText(“”);
-        kembali.setText(“”);
+        String tampil;
+        tampil = "";
+        int bayar = 0;
+        if(cbxbakso.isSelected()){
+            int jumlah=Integer.parseInt(textjumlah1.getText());
+            int total;
+            total=jumlah*8000;
+            bayar=bayar+total;
+            tampil +=cbxbakso.getText()+" 8.000"+" x "+jumlah+" = "+total+"\n";
+        }if(kmiea.isSelected()){
+            int jumlah=Integer.parseInt(textjumlah2.getText());
+            int total;
+            total=jumlah*10000;
+            bayar=bayar+total;
+            tampil +=kmiea.getText()+" 10.000"+" x "+jumlah+" = "+total+"\n";
+        }if(knasi.isSelected()){
+            int jumlah=Integer.parseInt(textjumlah3.getText());
+            int total;
+            total=jumlah*12000;
+            bayar=bayar+total;
+            tampil +=knasi.getText()+" 12.000"+" x "+jumlah+" = "+total+"\n";
+        }if(kayam.isSelected()){
+            int jumlah=Integer.parseInt(textjumlah4.getText());
+            int total;
+            total=jumlah*15000;
+            bayar=bayar+total;
+            tampil +=kayam.getText()+" 15.000"+" x "+jumlah+" = "+total+"\n";
+        }if(kmigoreng.isSelected()){
+            int jumlah=Integer.parseInt(textjumlah5.getText());
+            int total;
+            total=jumlah*11000;
+            bayar=bayar+total;
+            tampil +=kmigoreng.getText()+" 11.000"+" x "+jumlah+" = "+total+"\n";
+        }if(kaqua.isSelected()){
+            int jumlah=Integer.parseInt(textjumlah6.getText());
+            int total;
+            total=jumlah*4000;
+            bayar=bayar+total;
+            tampil +=kaqua.getText()+" 4.000"+" x "+jumlah+" = "+total+"\n";
+        }if(kjeruk.isSelected()){
+            int jumlah=Integer.parseInt(textjumlah7.getText());
+            int total;
+            total=jumlah*5000;
+            bayar=bayar+total;
+            tampil +=kjeruk.getText()+" 5.000"+" x "+jumlah+" = "+total+"\n";
+        }if(kteh.isSelected()){
+            int jumlah=Integer.parseInt(txtjumlah8.getText());
+            int total;
+            total=jumlah*6000;
+            bayar=bayar+total;
+            tampil +=kteh.getText()+" 6.000"+" x "+jumlah+" = "+total+"\n";
+        }
+        txtpesan.setText(tampil+"=========================================="+"\n"+"Total Bayar"+bayar);
+        
+       
+        
+        
+    }                                        
+
+    private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+        textjumlah1.setText("");
+        textjumlah2.setText("");
+        textjumlah3.setText("");
+        textjumlah4.setText("");
+        textjumlah5.setText("");
+        textjumlah6.setText("");
+        textjumlah7.setText("");
+        txtjumlah8.setText("");
+        txtpesan.setText("");
+        
     }
-    
-    private void hitungActionPerformed(java.awt.event.ActionEvent evt) {                                       
-        // TODO add your handling code here:
-        int a1 = Integer.parseInt(totalbiaya.getText());
-        int a2 = Integer.parseInt(bayar.getText());
-        int hasil = a2-a1;
-        kembali.setText(“”+hasil);
-    } 
     
      private void menu1ActionPerformed(java.awt.event.ActionEvent evt) {                                      
         // TODO add your handling code here:
